@@ -1,0 +1,53 @@
+.container *{
+    outline: 1px solid red;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    background: red;
+    height: 100vh;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer{
+    background: #84a98c;
+    flex-grow: 1;
+}
+
+nav, aside {
+    background: #52796f;
+    flex-grow: 2;
+}
+
+main {
+    background: #2f3e46;
+    /* flex-grow:15 ; */
+    min-height: 65vh; 
+}
+
+@media (min-width: 600px) {
+   /* * {
+        display: none;
+    } */
+
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    header, footer {
+        width: 100%;
+    }
+    
+    main{
+        width: 65%;
+        /* width: 65vw; */
+    }
+}
